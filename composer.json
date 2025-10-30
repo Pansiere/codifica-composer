@@ -13,5 +13,9 @@
             "email": "ojp027@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "nesbot/carbon": "^3.10",
+        "fakerphp/faker": "^1.24",
+        "symfony/var-dumper": "^7.3"
+    }
 }
