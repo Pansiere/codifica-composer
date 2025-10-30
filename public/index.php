@@ -2,6 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+use Faker\Factory;
 use Carbon\Carbon;
 use JoaoPedroPansiere\CodificaComposer\Cafe;
 
@@ -13,7 +14,7 @@ use JoaoPedroPansiere\CodificaComposer\Cafe;
 $carbon = '<a href="/?opcao=CARBON">Carbon</a>';
 $faker = '<a href="/?opcao=FAKER">Faker</a>';
 $debugBonito = '<a href="/?opcao=DEBUG">Debug bonito e moderno</a>';
-$cafezinho = '<a href="/?opcao=CAFEZINHO">Função CAFÉZINHO</a>';
+$cafezinho = '<a href="/?opcao=CAFEZINHO"><svg style="width:24px;height:24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M184 48C170.7 48 160 58.7 160 72C160 110.9 183.4 131.4 199.1 145.1L200.2 146.1C216.5 160.4 224 167.9 224 184C224 197.3 234.7 208 248 208C261.3 208 272 197.3 272 184C272 145.1 248.6 124.6 232.9 110.9L231.8 109.9C215.5 95.7 208 88.1 208 72C208 58.7 197.3 48 184 48zM128 256C110.3 256 96 270.3 96 288L96 480C96 533 139 576 192 576L384 576C425.8 576 461.4 549.3 474.5 512L480 512C550.7 512 608 454.7 608 384C608 313.3 550.7 256 480 256L128 256zM480 448L480 320C515.3 320 544 348.7 544 384C544 419.3 515.3 448 480 448zM320 72C320 58.7 309.3 48 296 48C282.7 48 272 58.7 272 72C272 110.9 295.4 131.4 311.1 145.1L312.2 146.1C328.5 160.4 336 167.9 336 184C336 197.3 346.7 208 360 208C373.3 208 384 197.3 384 184C384 145.1 360.6 124.6 344.9 110.9L343.8 109.9C327.5 95.7 320 88.1 320 72z"/></svg></a>';
 
 echo $carbon . ' - ' . $faker . ' - ' . $debugBonito . ' - ' . $cafezinho . '<br><br>';
 
@@ -40,7 +41,7 @@ if ($opcao === 'CARBON') {
 
 // Faker - Gerador de dados falsos realistas
 if ($opcao === 'FAKER') {
-    $faker = Faker\Factory::create('pt_BR'); // Gera dados em português do Brasil
+    $faker = Factory::create('pt_BR'); // Gera dados em português do Brasil
 
     echo '<strong>Nome completo:</strong> ' . $faker->name() . '<br>';
     echo '<strong>E-mail:</strong> ' . $faker->email() . '<br>';
@@ -105,7 +106,7 @@ if ($opcao === 'DEBUG') {
 if ($opcao === 'CAFEZINHO') {
 
     $cafe = new Cafe();
-    echo $cafe->informacoesCafe();
+    $cafe->informacoesCafe();
 
     exit();
 }

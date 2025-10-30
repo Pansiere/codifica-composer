@@ -61,9 +61,18 @@ PHP apontando para a pasta public:
 
 Depois, abra em seu navegador: http://localhost:8000
 
-//Fluxo:
-// 1. Mostrar o composer.json vazio;
-// 2. Rodar composer require nesbot/carbon;
-// 3. Mostrar que existe um 'repository/google' de pacotes, lá em Packgist
-// 4. Mostrar o que apareceu na pasta vendor/, no composer.lock e composer,json;
-// 5. Rodar e ver o resultado.
+## 🧰 Bibliotecas utilizadas
+
+- [**CarbonPHP** — Manipulação de datas e horários](https://github.com/CarbonPHP/carbon)
+- [**FakerPHP** — Geração de dados falsos para testes](https://github.com/FakerPHP/Faker)
+- [**Symfony Var-Dumper** — Ferramenta de debug aprimorada](https://github.com/symfony/var-dumper)
+
+
+<!--
+Fluxo:
+  1. Mostrar o composer.json vazio;
+  2. Rodar composer require nesbot/carbon;
+  3. Mostrar que existe um 'repository/google' de pacotes, lá em Packgist
+  4. Mostrar o que apareceu na pasta vendor/, no composer.lock e composer,json;
+  5. Rodar e ver o resultado.
+-->
